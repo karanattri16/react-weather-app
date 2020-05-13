@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import Title from "./Components/Title";
+import Form from "./Components/Form";
+import Weather from "./Components/Weather";
+export default class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <div className="wrapper">
+          <div className="main" >
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-5 title-container">
+                <Title />
+                </div>
+                <div className="col-sm-7 form-container">
+                <Form />
+                <Weather/>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+       
+      </React.Fragment>
+    );
+  }
 }
-
-export default App;
