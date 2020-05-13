@@ -23,7 +23,7 @@ export default class Context extends Component {
      const country = e.target.country.value;
     
      const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${api_key}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${api_key}&units=metric`
     );
     const data = await api_call.json();
     console.log(data)
