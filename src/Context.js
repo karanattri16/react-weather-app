@@ -27,7 +27,7 @@ export default class Context extends Component {
     );
     const data = await api_call.json();
     console.log(data)
-    if(data.cod==404){
+    if(data.cod===404){
         this.setState({
           city: undefined,
           country:undefined,
